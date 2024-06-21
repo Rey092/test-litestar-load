@@ -43,4 +43,3 @@ RUN poetry install --no-dev --no-root
 
 # install app
 COPY . .
-p
