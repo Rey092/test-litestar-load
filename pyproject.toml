@@ -10,6 +10,7 @@ python = "^3.12"
 gunicorn = "^22.0.0"
 uvicorn = "^0.30.1"
 litestar = "^2.9.0"
+redis = {extras = ["hiredis"], version = "^5.0.6"}
 
 
 [build-system]
