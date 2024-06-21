@@ -15,7 +15,7 @@ async def index() -> dict[str, str]:
 async def get_redis() -> dict[str, str]:
     # get hello from redis, if not exists, set hello to redis
     hello = await r.get("hello")
-    if hello is None:
+    if not hello:
         await r.set("hello", "world")
         hello = "world"
 
