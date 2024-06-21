@@ -21,13 +21,14 @@ async def get_redis() -> dict[str, str]:
 
     return {"hello": hello}
 
+
 @get("/books/{book_id:int}")
 async def get_book(book_id: int) -> dict[str, int]:
     return {"book_id": book_id}
 
 
 app = Litestar(
-    [index, get_book],
+    [index, get_book, get_redis],
     openapi_config=OpenAPIConfig(
         title="Example API",
         description="This is an example API.",
