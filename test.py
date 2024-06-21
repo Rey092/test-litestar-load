@@ -8,6 +8,11 @@ async def index() -> dict[str, str]:
     return {"response": "ok"}
 
 
+@get("/book")
+async def index() -> dict[str, str]:
+    return {"response": "ok"}
+
+
 @get("/books/{book_id:int}")
 async def get_book(book_id: int) -> dict[str, int]:
     return {"book_id": book_id}
